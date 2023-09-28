@@ -1,16 +1,25 @@
 
-.headbar{
-    height: 50px;
 
+
+html{
+    font-family: sans-serif;
 }
 
-.flex-container{
-    
-    display: flex;
-    height: 100%;
-    margin: 0 auto;
 
 
+/* barra del menu */
+.headbar{
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 12;
+    font-weight: 700;
 }
 
 #logo{
@@ -20,40 +29,76 @@
     height: 100%;
 }
 
-
-/* .cards{
-    position: relative;
-    margin-top: 5%;
-
+main{
+    padding-top: 80px;
 }
 
-.imgb{
-
-    position: absolute;
-    left:0%
-    z-index: 0;
-    
-} */
+/* immagini e contenitore */
+.flex-container{ 
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+}
 
 .card{
-    margin: 0 auto;
-
-
+    line-height: 100%;
 }
 
-.w-30>img{
+.card>img{
     object-fit: cover;
     max-width: 100%;
 }
 
+.card:hover .hover{
+    
+    z-index: -1;
+}
 
+.hover{
+    position: absolute;
+}
+
+.modello{
+    font-size: 15px;
+    font-weight: 900;
+}
+.prezzo{
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+.card>span{
+    margin-top: 20px;
+
+}
+
+/* segalini sulle immagini */
 .like{
-    background-color: aliceblue;
-
+    background-color: white;
     padding: 16px;
     position: absolute;
     top: 10%;
     right: 0px;
+}
+.card:hover .like{
+  color: red
+}
 
+
+
+
+
+.etichette{
+    position: relative;
+    display: inline-flex;
+    bottom: 20%;
+    left: 0%;
+}
+.tag-content{
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
 
 }
+
